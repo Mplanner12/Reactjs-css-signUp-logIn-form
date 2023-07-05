@@ -20,7 +20,7 @@ export default function Register({handleSubmit, onFormSwitch}) {
           <button type="submit">Log in</button>
         </form> 
       </div>
-      <button onClick={()=>props.onFormSwitch("logn")}>click here to Login if you already have an account</button>
+      <button onClick={()=> onFormSwitch("logn")}>click here to Login if you already have an account</button>
     </>
     )
 }
