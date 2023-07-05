@@ -1,7 +1,7 @@
 //Register component 
 import React, {useState} from "react";
 
-export default function Register() {
+export default function Register({handleSubmit, onFormSwitch}) {
   const [email, setEmail] = useState("")
   const [pass, setPass] = useState("")
   const [name, setName] = useState("")
@@ -12,11 +12,11 @@ export default function Register() {
       <div className="auth-form-container">
         <form onSubmit={handleSubmit} className="login-form">
           <label htmlFor="name">Name</label>
-          <input onChange={(e)=> e.value.target} value={name} type="name" placeholder="Enter your Name" id="name"/>
+          <input onChange={(e)=> setEmail(e.value.target)} value={name} type="name" placeholder="Enter your Name" id="name"/>
           <label htmlFor="email">Email</label>
-          <input onChange={(e)=> e.value.target} value={email} type="email" placeholder="Enter your email" id="email"/>
+          <input onChange={(e)=> setPass(e.value.target)} value={email} type="email" placeholder="Enter your email" id="email"/>
           <label htmlFor="pass">Password</label>
-          <input onChange={(e)=> e.value.target} value={pass}htype="password" placeholder="xxxxxxxxx" id="pass"/>
+          <input onChange={(e)=> setName(e.value.target)} value={pass}htype="password" placeholder="xxxxxxxxx" id="pass"/>
           <button type="submit">Log in</button>
         </form> 
       </div>
