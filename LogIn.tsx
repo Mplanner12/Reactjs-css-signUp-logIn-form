@@ -1,7 +1,7 @@
 //Login component 
 import React, {useState} from "react";
 
-export default function LogIn(props) {
+export default function LogIn({handleSubmit, onFormSwitch}) {
   const [email, setEmail] = useState("")
   const [pass, setPass] = useState("")
   
@@ -11,13 +11,13 @@ export default function LogIn(props) {
       <div className="auth-form-container">
         <form onSubmit={handleSubmit} className="login-form">
           <label htmlFor="email">Email</label>
-          <input onChange={(e)=> e.value.target} value={email} type="email" placeholder="Enter your email" id="email"/>
+          <input onChange={(e)=> setEmail(e.value.target)} value={email} type="email" placeholder="Enter your email" id="email"/>
           <label htmlFor="pass">Password</label>
-          <input onChange={(e)=> e.value.target} value={pass}htype="password" placeholder="xxxxxxxxx" id="pass"/>
+          <input onChange={(e)=> setPass(e.value.target)} value={pass}htype="password" placeholder="xxxxxxxxx" id="pass"/>
           <button type="submit">Log in</button>
         </form> 
       </div>
-      <button onClick={()=>props.onFormSwitch("Register")}
+      <button onClick={()=> onFormSwitch("Register")}
       >click here to Register if you don't have an account</button>
     </>
     )
