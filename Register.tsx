@@ -1,7 +1,7 @@
 //Register component 
 import React, {useState} from "react";
 
-export default function Register({handleSubmit, onFormSwitch}) {
+export default function Register({handleSubmit}) {
   const [email, setEmail] = useState("")
   const [pass, setPass] = useState("")
   const [name, setName] = useState("")
