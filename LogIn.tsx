@@ -1,7 +1,7 @@
 //Login component 
 import React, {useState} from "react";
 
-export default function LogIn({handleSubmit, onFormSwitch}) {
+export default function LogIn({handleSubmit}) {
   const [email, setEmail] = useState("")
   const [pass, setPass] = useState("")
   
